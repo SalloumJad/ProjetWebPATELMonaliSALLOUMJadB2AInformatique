@@ -9,8 +9,10 @@
     "\\database\\seeders",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\User"
+    "\\resources\\views\\Links",
+    "\\resources\\views\\User",
+    "\\routes"
   ],
-  "SelectedNode": "\\app\\Models\\User.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\AcceuilController.php",
   "PreviewInSolutionExplorer": false
 }

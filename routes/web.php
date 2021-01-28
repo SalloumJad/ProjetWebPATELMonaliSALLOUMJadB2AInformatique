@@ -37,9 +37,9 @@ Route::get('/', 'App\Http\Controllers\GameController@showPage');
 
 Route::get('/acceuil', 'App\Http\Controllers\AcceuilController@showPage');
 
-Route::post('/acceuil', 'App\Http\Controllers\GameController@showGame')->name('game.showGame');
+Route::post('/acceuil/{id}', 'App\Http\Controllers\GameController@showGame');
 
-Route::get('/game/{id}', 'App\Http\Controllers\GameController@showGame');
+Route::get('/game/{id}', 'App\Http\Controllers\GameController@showGame')->name('game.showGame');
 
 Route::post('/game/{id}', 'App\Http\Controllers\GameController@addGameToCart')->name('game.addGameToCart');
 
