@@ -36,3 +36,7 @@ Route::post('/modifyProfil', 'App\Http\Controllers\ProfilController@confirmModif
 Route::get('/users', 'App\Http\Controllers\ProfilController@showUsers');
 
 Route::post('/users', 'App\Http\Controllers\ProfilController@deleteAccount')->name('users.deleteAccount');
+
+Route::get('/conseils', 'App\Http\Controllers\PostController@showPage');
+
+Route::post('/conseils', 'App\Http\Controllers\PostController@makePost')->name('conseils.makePost');
