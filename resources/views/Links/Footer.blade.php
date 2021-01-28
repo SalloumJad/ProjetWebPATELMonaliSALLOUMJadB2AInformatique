@@ -49,7 +49,16 @@
 
         <ul class="list-unstyled mb-0">
           <li>
+            <a href="#!" class="text-dark">Service après vente</a>
+          </li>
+          <li>
             <a href="#!" class="text-dark">Publicité</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Aide et suivi de commande</a>
+          </li>
+          <li>
+            <a href="/connexionAdmin" class="text-dark">Connexion administrateur</a>
           </li>
         </ul>
       </div>
@@ -61,10 +70,13 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!" class="text-dark">Jeu le plus conseillé:</a>
+            <a href="#!" class="text-dark">Jeu le plus commendé:</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Post le plus consulté:</a>
+            <a href="#!" class="text-dark">Niveau de satisfaction générale:</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">10 derniers avis des clients</a>
           </li>
         </ul>
       </div>
@@ -77,7 +89,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
     © 2021 Copyright:
-    <a class="text-dark" href="#">ConseilsDeJeux.com</a>
+    <a class="text-dark" href="#">Ecommerce.com</a>
   </div>
   <!-- Copyright -->
 </footer>

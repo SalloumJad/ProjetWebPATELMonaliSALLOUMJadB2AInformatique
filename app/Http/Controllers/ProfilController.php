@@ -5,24 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User as User;
 
-class ProfilController extends Controller
+class ProfilController extends Controller   // Gère toutes les fonctions liées au profil utilisateur
 {
-    public function showPage(){
+    public function showPage(){ // Affiche la page du profil de l'utilisateur d'il est connecté
         $user = User::all()->where('id', auth()->user()->id)->first();
         return view('User/profil',['user' => $user]);
     }
 
-    public function modifyProfil(){
+    public function modifyProfil(){ // S'enclenche lorsque l'utilisateur clique sur le boutton du même nom
         $user = User::all()->where('id', auth()->user()->id)->first();
         return view('User/modifyProfil',['user' => $user]);
     }
 
-    public function showModifPage(){
+    public function showModifPage(){ // Affiche la mage de modification de profil après la fonction du dessus
         $user = User::all()->where('id', auth()->user()->id)->first();
         return view('User/modifyProfil',['user' => $user]);
     }
 
-    public function confirmModif(){
+    public function confirmModif(){ // Lance la vérification des données afin de modifier les informations de l'utilisateur
         $user = User::all()->where('id', auth()->user()->id)->first();
         $user->firstName = request('firstName');
         $user->lastName = request('lastName');
@@ -30,21 +30,10 @@ class ProfilController extends Controller
         $user->birthDate = request('birthDate');
         $user->password = bcrypt(request('password'));
         $user->adress = request('adress');
+        $user->money = request('money');
         $user->save();
 
         $user = User::all()->where('id', auth()->user()->id)->first();
         return view('User/profil',['user' => $user]);
-    }
-
-    public function showUsers(){
-        $users = User::orderBy('created_at', 'DESC')->get();
-        return view('User/users',['users' => $users]);
-    }
-
-    public function deleteAccount(int $id){
-        User::all()->where('id', $id)->delete();
-
-        $users = User::all();
-        return view('User/users',['users' => $users]);
     }
 }

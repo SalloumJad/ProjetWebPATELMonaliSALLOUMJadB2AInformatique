@@ -25,6 +25,10 @@
             <label name="adress" class="sr-only">Adresse: {{ $user->adress }} </label>
         </div>
 
+        <div class="form-group mb-2">
+            <label name="money" class="sr-only">Argent du compte: {{ $user->money }} </label>
+        </div>
+
         <a href="/modifyProfil"><input type="button" class="btn btn-primary mb-2" value="Modifier le profil"></a>
 
     </form>

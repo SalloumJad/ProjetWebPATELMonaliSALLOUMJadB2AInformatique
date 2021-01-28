@@ -1,4 +1,4 @@
-@extends('Links/layout')
+@extends('Links/layoutAdmin')
 
 @section('content')
 

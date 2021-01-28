@@ -5,7 +5,7 @@
 </style>
 
 <header class="page-header">
-    <h1>Conseils de Jeux Vidéos</h1>
+    <h1>Ecommerce</h1>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -23,9 +23,7 @@
 
                     <button class="btn btn-outline-success" type="button"><a href="{{url('/connexion')}}">Connexion</a></button>
 
-                    <button class="btn btn-outline-success" type="button"><a href="{{url('/conseils')}}">Conseils</a></button>
-
-                    <button class="btn btn-outline-success" type="button"><a href="{{url('/users')}}">Utilisateurs</a></button>
+                    <button class="btn btn-outline-success" type="button"><a href="{{url('/panier')}}">Panier</a></button>
                 </ul>
 
             </form>

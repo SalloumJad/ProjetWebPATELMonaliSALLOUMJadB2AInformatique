@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -16,14 +16,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [ // Les attributs du modèle de la base de donnée enregistrables.
-        'firstName',
+    protected $fillable = [
         'email',
         'password',
-        'lastName',
-        'adress',
-        'birthDate',
-        'money',
     ];
 
     /**
@@ -31,7 +26,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [ // Les attributs de la base de donnée cachés, sécurisés.
+    protected $hidden = [
         'password',
         'remember_token',
     ];
@@ -41,7 +36,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [ // Les attributs de la base de donnée enregistrés lors de l'envoi.
+    protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 }

@@ -13,11 +13,12 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
 
-    public function run()
+    public function run() // On sépare les seeders en plusieurs parties afin de simplifier les relations ainsi que limiter la casse si il y a une erreur dans l'un d'entre eux.
     {
         $this->call([
         UserSeeder::class,
-        PostSeeder::class,
+        GameSeeder::class,
+        AdminSeeder::class,
         ]);
     }
 }

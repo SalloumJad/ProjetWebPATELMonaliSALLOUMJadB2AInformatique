@@ -14,13 +14,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = new User();
+        $user = new User(); // Entrée des informations de l'exemple ou des exemples voulu en base de donnée
         $user->firstName = 'Salloum';
         $user->lastName = 'Jad';
-        $user->birthDate = '22/01/2021';
+        $user->birthDate = '2021-22-01';
         $user->email = 'salloum.jad@ynov.com';
         $user->password = bcrypt('Test1234');
         $user->adress = '5 avenue de Victor Hugo';
+        $user->money = 1000;
         $user->save();
     }
 }

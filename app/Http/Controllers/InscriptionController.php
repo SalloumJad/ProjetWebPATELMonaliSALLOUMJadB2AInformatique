@@ -7,11 +7,11 @@ use App\Models\User as User;
 
 class InscriptionController extends Controller
 {
-    public function showPage(){
+    public function showPage(){ // Affiche la page d'inscription
         return view('User/inscription');
     }
     
-    public function makeAccount(){
+    public function makeAccount(){  // Vérifie l'entrée des données et les enregistres dans la base de données sqlite.
         request()->validate([
             'firstName' =>['required'],
             'lastName' =>['required'],
@@ -19,6 +19,7 @@ class InscriptionController extends Controller
             'email' =>['required', 'email'],
             'password' =>['required', 'min:8'],
             'adress' =>['required'],
+            'money' =>['required'],
         ]);
 
         $user = User::create([
@@ -28,6 +29,7 @@ class InscriptionController extends Controller
             'email' =>request('email'),
             'password' =>bcrypt(request('password')),
             'adress' =>request('adress'),
+            'money' =>request('money'),
         ]);
 
         //Mail::to($user->email)->send(new Register());

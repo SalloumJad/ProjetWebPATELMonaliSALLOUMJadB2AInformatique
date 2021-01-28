@@ -71,6 +71,17 @@
             <p>Adresse est obligatoire!</p>
         @endif
 
+        <div class="form-group row">
+            <label for="inputMoney" class="col-sm-2 col-form-label">Argent du compte</label>
+            <div class="col-sm-10">
+                <input name="money" type="text" class="form-control" id="inputMoney" placeholder="Montant" value="{{ old('money') }}">
+            </div>
+        </div>
+
+        @if($errors->has('money'))
+            <p>Le montant est obligatoire!</p>
+        @endif
+
         <input type="submit" value="Créer un compte" class="btn btn-primary mb-2">
     </form>
 
